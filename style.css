@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(114, 113, 113);
+}
+.container{
+    background-color: white;
+    width: 380px;
+    padding: 10px;
+    margin: 0 auto;
+}
+.header{
+    width: 380px;
+    height: 200px;
+    background-color: blueviolet;
+    border-radius: 15px 15px 0 0;
+    position: relative;
+}
