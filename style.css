@@ -6,6 +6,7 @@ body{
     width: 380px;
     padding: 10px;
     margin: 0 auto;
+    border-radius: 15px 15px 0 0;
 }
 .header{
     width: 380px;
@@ -13,4 +14,28 @@ body{
     background-color: blueviolet;
     border-radius: 15px 15px 0 0;
     position: relative;
+}
+.clear{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.clear i{
+    font-size: 30px;
+    color: #FFF
+}
+.clear i:hover{
+    cursor: pointer;
+    text-shadow: 1px 3px 5px #000;
+    transform: rotate(45deg);
+}
+#date{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #FFF;
+    font-size: 25px;
+    font-family: 'Merriweather', sans-serif;
 }
