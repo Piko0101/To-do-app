@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Muli:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>To-Do App - Javascript</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="clear">
+                <i class="fa fa-refresh" aria-hidden="true"></i>
+            </div>
+            <div id="date"></div>
+        </div>
+        <div class="content">
+            <ul id="list">
+                <li class="item">
+                    <i class="fa fa-circle-thin complete" aria-hidden="true"></i>
+                    <p class="text">Drink Coffee</p>
+                    <i class="fa fa-trash-o delete" aria-hidden="true"></i>
+                </li>
+            </ul>
+            <div class = "add-item">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                <input type="text" id="input" placeholder="Add a to-do">
+
+            </div>
+        </div> 
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
