@@ -62,3 +62,15 @@ function removeToDo(element) {
     element.parentNode.parentNode.removeChild(element.parentNode); 
     LIST[element.id].trash = true;
 }
+
+//target the items created dynamically
+list.addEventListener("click", function(event){
+    const element = event.target;
+    const elementJob = element.attributes.job.value;
+
+    if(elementJob == "complete"){
+        completeToDo(element);
+    }else if(elementJob == "delete"){
+        removeToDo(element);
+    }
+})
