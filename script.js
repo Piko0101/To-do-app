@@ -8,9 +8,32 @@ const CHECK = "fa-check-circle";
 const UNCHECK = "fa-circle-thin";
 const LINE_THROUGH = "lineThrough";
 //variables
-let LIST = [], 
-    id = 0;
+let LIST, id;
 
+//get item from localStorage
+let data = localStorage.getItem("TODO");
+
+//check if data is not empty
+if (data){
+    LIST = JSON.parse(data);
+    id = LIST.length;
+    loadList(LIST);
+}else{
+    LIST = [];
+    id = 0;
+}
+
+//load items to the user's interface
+function loadList(array){
+    array.forEach(function(item){
+        addToDo(item.name, item.id, item.done, item.trash);
+    });
+}
+// clear the local storage
+clear.addEventListener("click", function(){
+    localStorage.clear();
+    location.reload();
+})
 //show todays date
 const options = {weekday:"long", month: "short", day: "numeric"};
 const today = new Date();
@@ -43,6 +66,7 @@ document.addEventListener("keyup", function(event){
                 done: false,
                 trash: false
             });
+            localStorage.setItem("TODO", JSON.stringify(LIST));
             id++;
         }
         input.value= "";
@@ -73,4 +97,5 @@ list.addEventListener("click", function(event){
     }else if(elementJob == "delete"){
         removeToDo(element);
     }
+    localStorage.setItem("TODO", JSON.stringify(LIST));
 })
